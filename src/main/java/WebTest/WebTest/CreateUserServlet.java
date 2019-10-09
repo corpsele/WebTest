@@ -1,12 +1,25 @@
 package WebTest.WebTest;
 
+import java.util.List;
+import java.util.Map;
+import java.util.Set;
 import java.io.IOException;
+import java.io.InputStream;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Enumeration;
+import java.util.HashMap;
+import java.util.logging.Logger;
+
 import javax.servlet.ServletException;
+import javax.servlet.ServletInputStream;
 import javax.servlet.annotation.WebInitParam;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+
+import com.google.gson.Gson;
 
 /**
  * Servlet implementation class CreateUserServlet
@@ -42,7 +55,27 @@ public class CreateUserServlet extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		doGet(request, response);
+//		doGet(request, response);
+//		List<HashMap<String, String>> list = (ArrayList<HashMap<String, String>>) request.getParameterNames();
+//		Map<String, String> map = request.getParameterMap();
+//		Set<String> keys = map.keySet();
+//		for (String key: keys) {
+//			String valueString = map.get(key);
+//			log("key="+key+"value="+valueString);
+//		}
+		String tmpString = GetRequestJsonUtils.readJSONData(request);
+		Gson gson = new Gson();
+		String jsonString = gson.toJson(tmpString);
+		log("json="+tmpString);
+		log("jsonstr = "+jsonString);
+		log("param="+request.getParameter("format"));
+		HashMap hm = new HashMap();
+		hm.putAll(request.getParameterMap());
+		Set<String> keys = hm.keySet();
+		for (String key:keys) {
+			log("key="+key);	
+		}
+		
 	}
 
 }
