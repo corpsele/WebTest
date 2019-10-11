@@ -1,5 +1,6 @@
 package WebTest.WebTest;
 
+import java.io.BufferedReader;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
@@ -19,7 +20,10 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import com.alibaba.fastjson.JSON;
+import com.alibaba.fastjson.JSONObject;
 import com.google.gson.Gson;
+
 
 /**
  * Servlet implementation class CreateUserServlet
@@ -63,19 +67,12 @@ public class CreateUserServlet extends HttpServlet {
 //			String valueString = map.get(key);
 //			log("key="+key+"value="+valueString);
 //		}
-		String tmpString = GetRequestJsonUtils.readJSONData(request);
-		Gson gson = new Gson();
-		String jsonString = gson.toJson(tmpString);
-		log("json="+tmpString);
-		log("jsonstr = "+jsonString);
-		log("param="+request.getParameter("format"));
-		HashMap hm = new HashMap();
-		hm.putAll(request.getParameterMap());
-		Set<String> keys = hm.keySet();
-		for (String key:keys) {
-			log("key="+key);	
-		}
-		
+
+
+		response.setStatus(200);
+		response.getWriter().println(JSONObject.toJSONString(request.getParameterMap()));
+        response.getWriter().println("success");
+
 	}
 
 }

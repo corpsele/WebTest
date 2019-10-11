@@ -1,0 +1,15 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="WebTest" type="JettyRunner-By-GuiKeller" factoryName="Jetty Runner">
+    <option name="JettyRunnerV130-SelectedModuleName" value="WebTest" />
+    <option name="JettyRunnerV130-WebAppPath" value="/WebTest" />
+    <option name="JettyRunnerV130-WebAppFolder" value="$PROJECT_DIR$/WebContent" />
+    <option name="JettyRunnerV130-ClassesDirectory" value="$PROJECT_DIR$/target/classes" />
+    <option name="JettyRunnerV130-RunOnPort" value="8080" />
+    <option name="JettyRunnerV130-JettyXML" value="" />
+    <option name="JettyRunnerV130-VmArgs" value="" />
+    <option name="JettyRunnerV130-PassParentEnvVars" value="true" />
+    <method v="2">
+      <option name="Make" enabled="true" />
+    </method>
+  </configuration>
+</component>

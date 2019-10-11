@@ -1,0 +1,11 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="WebTest_Runner" type="TomcatRunner-By-Camtwo" factoryName="Tomcat Runner">
+    <option name="TomcatRunnerV001-Modules" value="{&quot;modules&quot;:[{&quot;context&quot;:&quot;/WebTest&quot;,&quot;documentBase&quot;:&quot;$PROJECT_DIR$/WebContent&quot;,&quot;internal&quot;:true,&quot;reloadable&quot;:true}]}" />
+    <option name="TomcatRunnerV001-TomcatInstallation" value="$USER_HOME$/Downloads/apache-tomcat-9.0.22" />
+    <option name="TomcatRunnerV001-VmArgs" value="" />
+    <option name="TomcatRunnerV001-PassParentEnvVars" value="true" />
+    <method v="2">
+      <option name="Make" enabled="true" />
+    </method>
+  </configuration>
+</component>
